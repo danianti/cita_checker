@@ -3,10 +3,9 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-import os
-import tempfile
-import requests
 import time
+import requests
+import os
 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
@@ -19,19 +18,21 @@ def send_telegram_message(text):
     url = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
     data = {'chat_id': TELEGRAM_CHAT_ID, 'text': text}
     try:
-        requests.post(url, data=data)
+        response = requests.post(url, data=data)
+        if response.status_code != 200:
+            print(f"[WARN] Telegram message failed: {response.text}")
     except Exception as e:
-        print(f"Failed to send Telegram message: {e}")
+        print(f"[ERROR] Failed to send Telegram message: {e}")
 
 def main():
     options = webdriver.ChromeOptions()
+    options.add_argument("--headless")  # run in headless mode for GitHub Actions
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--headless")  # Uncomment if you want headless mode
-
-    # Create a unique temp directory for user-data-dir to avoid session conflicts
-    temp_user_data_dir = tempfile.mkdtemp()
-    options.add_argument(f"--user-data-dir={temp_user_data_dir}")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--window-size=1920,1080")
+    # Unique user-data-dir to avoid session conflicts on CI runners
+    options.add_argument(f"--user-data-dir=/tmp/unique_user_data_{int(time.time())}")
 
     driver = webdriver.Chrome(options=options)
     wait = WebDriverWait(driver, 30)
@@ -88,10 +89,14 @@ def main():
         wait.until(EC.element_to_be_clickable((By.ID, 'btnEnviar'))).click()
         print("[INFO] Clicked final 'Aceptar' button (btnEnviar)")
 
+        # Wait for page load before checking messages
         time.sleep(3)
+
         page_source = driver.page_source
 
+        # The no appointments message text to look for (partial substring OK)
         no_appointments_msg = "En este momento no hay citas disponibles"
+
         if no_appointments_msg in page_source:
             print("[INFO] No appointments available.")
             send_telegram_message("🚫 No hay citas disponibles en Ávila para POLICÍA-TOMA DE HUELLAS.")

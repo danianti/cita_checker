@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
@@ -6,8 +7,11 @@ from selenium.common.exceptions import TimeoutException
 import time
 import requests
 
-TELEGRAM_TOKEN = '8322483491:AAGLfls2dUvCs1zAIF4CXE00l2P-5qgUdyE'
-TELEGRAM_CHAT_ID = '8131218642'
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+
+if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
+    raise ValueError("Telegram token or chat ID not set in environment variables")
 
 NIE = 'Y5550506E'
 FULL_NAME = 'FREDDY ABDIEL PERAZA BOLANOS'

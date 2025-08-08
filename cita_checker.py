@@ -1,11 +1,12 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-import time
 import requests
 import os
+import time
 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
@@ -26,16 +27,22 @@ def send_telegram_message(text):
 
 def main():
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")  # run in headless mode for GitHub Actions
+    options.add_argument("--headless=new")  # new headless mode
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
-    # Unique user-data-dir to avoid session conflicts on CI runners
-    options.add_argument(f"--user-data-dir=/tmp/unique_user_data_{int(time.time())}")
+    options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--disable-background-networking")
+    options.add_argument("--disable-sync")
+    options.add_argument("--metrics-recording-only")
+    options.add_argument("--disable-default-apps")
 
-    driver = webdriver.Chrome(options=options)
-    wait = WebDriverWait(driver, 30)
+    service = Service()
+
+    driver = webdriver.Chrome(service=service, options=options)
+    wait = WebDriverWait(driver, 15)
 
     try:
         print("[STEP] Opening main page...")
@@ -53,9 +60,11 @@ def main():
         accept_btn.click()
         print("[INFO] Clicked Accept button for province")
 
-        # Step 2: Accept cookies if present
+        # Step 2: Accept cookies if present (short timeout)
         try:
-            cookie_btn = wait.until(EC.element_to_be_clickable((By.ID, "cookie_action_close_header")))
+            cookie_btn = WebDriverWait(driver, 5).until(
+                EC.element_to_be_clickable((By.ID, "cookie_action_close_header"))
+            )
             cookie_btn.click()
             print("[INFO] Cookie consent accepted")
         except TimeoutException:
@@ -68,7 +77,6 @@ def main():
         tramite_select.select_by_value("4010")
         print("[INFO] Tramite 4010 selected")
 
-        # Click Aceptar button
         btn_aceptar = wait.until(EC.element_to_be_clickable((By.ID, "btnAceptar")))
         btn_aceptar.click()
         print("[INFO] Clicked Accept button after selecting tramite")
@@ -89,12 +97,11 @@ def main():
         wait.until(EC.element_to_be_clickable((By.ID, 'btnEnviar'))).click()
         print("[INFO] Clicked final 'Aceptar' button (btnEnviar)")
 
-        # Wait for page load before checking messages
-        time.sleep(3)
+        # Wait for appointment results container
+        wait.until(EC.presence_of_element_located((By.ID, 'resultadoBusqueda')))
 
         page_source = driver.page_source
 
-        # The no appointments message text to look for (partial substring OK)
         no_appointments_msg = "En este momento no hay citas disponibles"
 
         if no_appointments_msg in page_source:

@@ -1,16 +1,15 @@
-import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
+import os
 import tempfile
-import time
 import requests
+import time
 
-# Use secrets from environment variables
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 NIE = 'Y5550506E'
 FULL_NAME = 'FREDDY ABDIEL PERAZA BOLANOS'
@@ -26,11 +25,11 @@ def send_telegram_message(text):
 
 def main():
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")  # uncomment if you want headless mode
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--headless")  # Uncomment if you want headless mode
 
-    # Add a unique temp user data directory to avoid "already in use" error:
+    # Create a unique temp directory for user-data-dir to avoid session conflicts
     temp_user_data_dir = tempfile.mkdtemp()
     options.add_argument(f"--user-data-dir={temp_user_data_dir}")
 
@@ -89,13 +88,10 @@ def main():
         wait.until(EC.element_to_be_clickable((By.ID, 'btnEnviar'))).click()
         print("[INFO] Clicked final 'Aceptar' button (btnEnviar)")
 
-        # Wait for page load before checking messages
         time.sleep(3)
-
         page_source = driver.page_source
 
         no_appointments_msg = "En este momento no hay citas disponibles"
-
         if no_appointments_msg in page_source:
             print("[INFO] No appointments available.")
             send_telegram_message("🚫 No hay citas disponibles en Ávila para POLICÍA-TOMA DE HUELLAS.")

@@ -1346,4 +1346,88 @@ Stacktrace:
 15  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
 
 Checking for appointments...
+Error checking cita: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="form"]"}
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+0   chromedriver                        0x0000000105293274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x000000010528b1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x0000000104dd54fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x0000000104e1ca14 cxxbridge1$string$len + 382640
+4   chromedriver                        0x0000000104e5ddb8 cxxbridge1$string$len + 649812
+5   chromedriver                        0x0000000104e10d30 cxxbridge1$string$len + 334284
+6   chromedriver                        0x0000000105256674 cxxbridge1$str$ptr + 2493140
+7   chromedriver                        0x00000001052598a8 cxxbridge1$str$ptr + 2505992
+8   chromedriver                        0x00000001052374ac cxxbridge1$str$ptr + 2365708
+9   chromedriver                        0x000000010525a164 cxxbridge1$str$ptr + 2508228
+10  chromedriver                        0x00000001052285a4 cxxbridge1$str$ptr + 2304516
+11  chromedriver                        0x0000000105279c80 cxxbridge1$str$ptr + 2638048
+12  chromedriver                        0x0000000105279e0c cxxbridge1$str$ptr + 2638444
+13  chromedriver                        0x000000010528ae30 cxxbridge1$str$ptr + 2708112
+14  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+15  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+Checking for appointments...
+Error checking cita: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="form"]"}
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+0   chromedriver                        0x000000010141f274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001014171e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x0000000100f614fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x0000000100fa8a14 cxxbridge1$string$len + 382640
+4   chromedriver                        0x0000000100fe9db8 cxxbridge1$string$len + 649812
+5   chromedriver                        0x0000000100f9cd30 cxxbridge1$string$len + 334284
+6   chromedriver                        0x00000001013e2674 cxxbridge1$str$ptr + 2493140
+7   chromedriver                        0x00000001013e58a8 cxxbridge1$str$ptr + 2505992
+8   chromedriver                        0x00000001013c34ac cxxbridge1$str$ptr + 2365708
+9   chromedriver                        0x00000001013e6164 cxxbridge1$str$ptr + 2508228
+10  chromedriver                        0x00000001013b45a4 cxxbridge1$str$ptr + 2304516
+11  chromedriver                        0x0000000101405c80 cxxbridge1$str$ptr + 2638048
+12  chromedriver                        0x0000000101405e0c cxxbridge1$str$ptr + 2638444
+13  chromedriver                        0x0000000101416e30 cxxbridge1$str$ptr + 2708112
+14  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+15  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+Checking for appointments...
+Error checking cita: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="form"]"}
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+0   chromedriver                        0x0000000102a87274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000102a7f1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001025c94fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x0000000102610a14 cxxbridge1$string$len + 382640
+4   chromedriver                        0x0000000102651db8 cxxbridge1$string$len + 649812
+5   chromedriver                        0x0000000102604d30 cxxbridge1$string$len + 334284
+6   chromedriver                        0x0000000102a4a674 cxxbridge1$str$ptr + 2493140
+7   chromedriver                        0x0000000102a4d8a8 cxxbridge1$str$ptr + 2505992
+8   chromedriver                        0x0000000102a2b4ac cxxbridge1$str$ptr + 2365708
+9   chromedriver                        0x0000000102a4e164 cxxbridge1$str$ptr + 2508228
+10  chromedriver                        0x0000000102a1c5a4 cxxbridge1$str$ptr + 2304516
+11  chromedriver                        0x0000000102a6dc80 cxxbridge1$str$ptr + 2638048
+12  chromedriver                        0x0000000102a6de0c cxxbridge1$str$ptr + 2638444
+13  chromedriver                        0x0000000102a7ee30 cxxbridge1$str$ptr + 2708112
+14  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+15  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+Checking for appointments...
+Error checking cita: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="form"]"}
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Stacktrace:
+0   chromedriver                        0x0000000102e43274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000102e3b1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001029854fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001029cca14 cxxbridge1$string$len + 382640
+4   chromedriver                        0x0000000102a0ddb8 cxxbridge1$string$len + 649812
+5   chromedriver                        0x00000001029c0d30 cxxbridge1$string$len + 334284
+6   chromedriver                        0x0000000102e06674 cxxbridge1$str$ptr + 2493140
+7   chromedriver                        0x0000000102e098a8 cxxbridge1$str$ptr + 2505992
+8   chromedriver                        0x0000000102de74ac cxxbridge1$str$ptr + 2365708
+9   chromedriver                        0x0000000102e0a164 cxxbridge1$str$ptr + 2508228
+10  chromedriver                        0x0000000102dd85a4 cxxbridge1$str$ptr + 2304516
+11  chromedriver                        0x0000000102e29c80 cxxbridge1$str$ptr + 2638048
+12  chromedriver                        0x0000000102e29e0c cxxbridge1$str$ptr + 2638444
+13  chromedriver                        0x0000000102e3ae30 cxxbridge1$str$ptr + 2708112
+14  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+15  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+Checking for appointments...
 Error checking cita: 

@@ -27,7 +27,7 @@ def send_telegram_message(text):
 
 def main():
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 

@@ -3,7 +3,7 @@ name: Cita Checker
 on:
   schedule:
     - cron: '*/10 * * * *'  # Every 10 minutes
-  workflow_dispatch:       # Allows manual trigger
+  workflow_dispatch:
 
 jobs:
   run-checker:
@@ -23,18 +23,26 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium requests
 
-      - name: Download ChromeDriver
-        run: |
-          CHROME_DRIVER_VERSION=$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)
-          wget -N https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
-          unzip -o -q chromedriver_linux64.zip
-          chmod +x chromedriver
-          sudo mv chromedriver /usr/local/bin/
-
       - name: Install Google Chrome
         run: |
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
+
+      - name: Get Chrome major version and download matching ChromeDriver
+        run: |
+          CHROME_VERSION=$(google-chrome --version | grep -oP '\d+\.\d+\.\d+\.\d+')
+          CHROME_MAJOR_VERSION=$(echo $CHROME_VERSION | cut -d '.' -f 1)
+          echo "Google Chrome version: $CHROME_VERSION"
+          echo "Chrome major version: $CHROME_MAJOR_VERSION"
+
+          # Get the latest ChromeDriver version for the detected Chrome major version
+          CHROME_DRIVER_VERSION=$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_MAJOR_VERSION")
+          echo "Downloading ChromeDriver version: $CHROME_DRIVER_VERSION"
+
+          wget -N "https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip"
+          unzip -o -q chromedriver_linux64.zip
+          chmod +x chromedriver
+          sudo mv chromedriver /usr/local/bin/
 
       - name: Run cita checker script
         env:

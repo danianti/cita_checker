@@ -2,8 +2,8 @@ name: Cita Checker
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # Run every 10 minutes
-  workflow_dispatch:        # Allow manual runs
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
 
 jobs:
   run-checker:
@@ -23,18 +23,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium requests
 
-      - name: Install Chrome 114
-        run: |
-          wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.198-1_amd64.deb
-          sudo dpkg -i google-chrome-stable_114.0.5735.198-1_amd64.deb || sudo apt-get -f install -y
-
-      - name: Download ChromeDriver 114
-        run: |
-          CHROME_DRIVER_VERSION=114.0.5735.90
-          wget -N https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
-          unzip -o chromedriver_linux64.zip
-          chmod +x chromedriver
-          sudo mv chromedriver /usr/local/bin/
+      - name: Install Chrome + compatible ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome: stable
+          chromedriver: true
 
       - name: Run cita checker script
         env:

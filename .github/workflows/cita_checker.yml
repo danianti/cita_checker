@@ -2,7 +2,7 @@ name: Cita Checker
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # every 10 minutes
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -23,20 +23,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium requests
 
-      - name: Install Chrome + compatible ChromeDriver
+      - name: Install Chrome + ChromeDriver
         uses: browser-actions/setup-chrome@v1
         with:
           chrome: stable
           chromedriver: true
 
-      - name: Check Chrome version
+      - name: Chrome version
         run: google-chrome --version
 
-      - name: Check ChromeDriver version
+      - name: ChromeDriver version
         run: chromedriver --version
 
-      - name: Run cita checker script
+      - name: Run cita checker script with debug
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python cita_checker.py
+        run: |
+          set -x
+          python cita_checker.py

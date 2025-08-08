@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
@@ -6,8 +7,9 @@ from selenium.common.exceptions import TimeoutException
 import time
 import requests
 
-TELEGRAM_TOKEN = '8322483491:AAGLfls2dUvCs1zAIF4CXE00l2P-5qgUdyE'
-TELEGRAM_CHAT_ID = '8131218642'
+# Read secrets from environment variables
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
+TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
 NIE = 'Y5550506E'
 FULL_NAME = 'FREDDY ABDIEL PERAZA BOLANOS'
@@ -23,7 +25,7 @@ def send_telegram_message(text):
 
 def main():
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")
+    # options.add_argument("--headless")  # Uncomment to run headless in CI
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
@@ -34,7 +36,6 @@ def main():
         print("[STEP] Opening main page...")
         driver.get('https://icp.administracionelectronica.gob.es/icpplus/index.html')
 
-        # Step 1: Select province Ávila
         print("[STEP] Selecting province Ávila...")
         province_select = wait.until(EC.presence_of_element_located((By.ID, "form")))
         select = Select(province_select)
@@ -46,7 +47,6 @@ def main():
         accept_btn.click()
         print("[INFO] Clicked Accept button for province")
 
-        # Step 2: Accept cookies if present
         try:
             cookie_btn = wait.until(EC.element_to_be_clickable((By.ID, "cookie_action_close_header")))
             cookie_btn.click()
@@ -54,40 +54,32 @@ def main():
         except TimeoutException:
             print("[INFO] No cookie consent popup found, continuing...")
 
-        # Select tramite 4010
         tramite_select_elem = wait.until(EC.presence_of_element_located((By.ID, "tramiteGrupo[1]")))
         tramite_select = Select(tramite_select_elem)
         print("[INFO] Tramite dropdown found. Selecting tramite 4010...")
         tramite_select.select_by_value("4010")
         print("[INFO] Tramite 4010 selected")
 
-        # Click Aceptar button
         btn_aceptar = wait.until(EC.element_to_be_clickable((By.ID, "btnAceptar")))
         btn_aceptar.click()
         print("[INFO] Clicked Accept button after selecting tramite")
 
-        # Step 3: Click Presentación sin Cl@ve
         presentacion_div = wait.until(EC.element_to_be_clickable((By.ID, "btnEntrar")))
         presentacion_div.click()
         print("[INFO] Clicked 'Presentación sin Cl@ve' option")
 
-        # Step 4: Fill form with NIE, name, nationality
         wait.until(EC.presence_of_element_located((By.ID, 'txtIdCitado'))).send_keys(NIE)
         driver.find_element(By.ID, 'txtDesCitado').send_keys(FULL_NAME)
         select_nationality = Select(driver.find_element(By.ID, 'txtPaisNac'))
         select_nationality.select_by_visible_text(NATIONALITY)
         print("[INFO] Filled NIE, full name, nationality")
 
-        # Click final Accept button (btnEnviar)
         wait.until(EC.element_to_be_clickable((By.ID, 'btnEnviar'))).click()
         print("[INFO] Clicked final 'Aceptar' button (btnEnviar)")
 
-        # Wait for page load before checking messages
-        time.sleep(3)
+        time.sleep(3)  # Wait for page to load
 
         page_source = driver.page_source
-
-        # The no appointments message text to look for (partial substring OK)
         no_appointments_msg = "En este momento no hay citas disponibles"
 
         if no_appointments_msg in page_source:

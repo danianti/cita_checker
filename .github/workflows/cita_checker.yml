@@ -29,6 +29,12 @@ jobs:
           chrome: stable
           chromedriver: true
 
+      - name: Check Chrome version
+        run: google-chrome --version
+
+      - name: Check ChromeDriver version
+        run: chromedriver --version
+
       - name: Run cita checker script
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}

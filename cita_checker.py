@@ -1,4 +1,3 @@
-import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
@@ -6,8 +5,10 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 import time
 import requests
+import tempfile
+import os
 
-# Read secrets from environment variables
+# Get secrets from environment variables (set in GitHub Actions)
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
@@ -19,15 +20,22 @@ def send_telegram_message(text):
     url = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
     data = {'chat_id': TELEGRAM_CHAT_ID, 'text': text}
     try:
-        requests.post(url, data=data)
+        response = requests.post(url, data=data)
+        response.raise_for_status()
+        print("[INFO] Telegram message sent successfully.")
     except Exception as e:
-        print(f"Failed to send Telegram message: {e}")
+        print(f"[ERROR] Failed to send Telegram message: {e}")
 
 def main():
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless")  # Uncomment to run headless in CI
+    # Uncomment if you want headless mode (recommended on CI)
+    # options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+
+    # Create a unique temp dir for user data to avoid 'user data dir in use' error
+    temp_user_data_dir = tempfile.mkdtemp()
+    options.add_argument(f"--user-data-dir={temp_user_data_dir}")
 
     driver = webdriver.Chrome(options=options)
     wait = WebDriverWait(driver, 30)
@@ -47,6 +55,7 @@ def main():
         accept_btn.click()
         print("[INFO] Clicked Accept button for province")
 
+        # Accept cookies if present
         try:
             cookie_btn = wait.until(EC.element_to_be_clickable((By.ID, "cookie_action_close_header")))
             cookie_btn.click()
@@ -54,6 +63,7 @@ def main():
         except TimeoutException:
             print("[INFO] No cookie consent popup found, continuing...")
 
+        # Select tramite 4010
         tramite_select_elem = wait.until(EC.presence_of_element_located((By.ID, "tramiteGrupo[1]")))
         tramite_select = Select(tramite_select_elem)
         print("[INFO] Tramite dropdown found. Selecting tramite 4010...")
@@ -77,7 +87,7 @@ def main():
         wait.until(EC.element_to_be_clickable((By.ID, 'btnEnviar'))).click()
         print("[INFO] Clicked final 'Aceptar' button (btnEnviar)")
 
-        time.sleep(3)  # Wait for page to load
+        time.sleep(3)
 
         page_source = driver.page_source
         no_appointments_msg = "En este momento no hay citas disponibles"

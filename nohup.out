@@ -1,0 +1,744 @@
+/Users/danikaantiglio/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x000000010256b274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001025631e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001020ad4fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001020fa5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001020f8b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001020f6924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001020f5d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x00000001020ea854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001020ea2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000102135db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x00000001020e8d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x000000010252e674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001025318a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x000000010250f4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000102532164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001025005a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000102551c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000102551e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000102562e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 5 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000100a67274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000100a5f1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001005a94fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001005f65a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001005f4b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001005f2924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001005f1d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x00000001005e6854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001005e62e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000100631db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x00000001005e4d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000100a2a674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000100a2d8a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000100a0b4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000100a2e164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001009fc5a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000100a4dc80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000100a4de0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000100a5ee30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 6 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x00000001007e7274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001007df1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001003294fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001003765a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000100374b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000100372924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000100371d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000100366854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001003662e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x00000001003b1db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000100364d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x00000001007aa674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001007ad8a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x000000010078b4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x00000001007ae164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x000000010077c5a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x00000001007cdc80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x00000001007cde0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x00000001007dee30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 5 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000105393274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x000000010538b1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x0000000104ed54fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x0000000104f225a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000104f20b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000104f1e924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000104f1dd20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000104f12854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x0000000104f122e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000104f5ddb8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000104f10d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000105356674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001053598a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x00000001053374ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x000000010535a164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001053285a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000105379c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000105379e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x000000010538ae30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 9 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x00000001006eb274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001006e31e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x000000010022d4fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x000000010027a5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000100278b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000100276924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000100275d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x000000010026a854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x000000010026a2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x00000001002b5db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000100268d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x00000001006ae674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001006b18a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x000000010068f4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x00000001006b2164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001006805a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x00000001006d1c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x00000001006d1e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x00000001006e2e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 6 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000100b17274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000100b0f1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001006594fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001006a65a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001006a4b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001006a2924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001006a1d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000100696854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001006962e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x00000001006e1db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000100694d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000100ada674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000100add8a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000100abb4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000100ade164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x0000000100aac5a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000100afdc80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000100afde0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000100b0ee30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 5 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000100a3f274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000100a371e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001005814fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001005ce5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001005ccb10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001005ca924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001005c9d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x00000001005be854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001005be2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000100609db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x00000001005bcd30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000100a02674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000100a058a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x00000001009e34ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000100a06164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001009d45a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000100a25c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000100a25e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000100a36e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 9 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000102d2b274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000102d231e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x000000010286d4fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001028ba5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001028b8b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001028b6924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001028b5d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x00000001028aa854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001028aa2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x00000001028f5db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x00000001028a8d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000102cee674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000102cf18a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000102ccf4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000102cf2164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x0000000102cc05a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000102d11c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000102d11e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000102d22e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 6 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x000000010338b274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001033831e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x0000000102ecd4fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x0000000102f1a5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000102f18b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000102f16924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000102f15d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000102f0a854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x0000000102f0a2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000102f55db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000102f08d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x000000010334e674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001033518a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x000000010332f4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000103352164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001033205a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000103371c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000103371e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000103382e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 9 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000100d1b274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000100d131e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x000000010085d4fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001008aa5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001008a8b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001008a6924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001008a5d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x000000010089a854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x000000010089a2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x00000001008e5db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000100898d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000100cde674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000100ce18a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000100cbf4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000100ce2164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x0000000100cb05a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000100d01c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000100d01e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000100d12e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 7 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000102d97274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000102d8f1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001028d94fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001029265a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000102924b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000102922924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000102921d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000102916854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001029162e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000102961db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000102914d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000102d5a674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000102d5d8a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000102d3b4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000102d5e164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x0000000102d2c5a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000102d7dc80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000102d7de0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000102d8ee30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 7 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000104b17274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000104b0f1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001046594fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001046a65a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001046a4b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001046a2924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001046a1d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000104696854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001046962e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x00000001046e1db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000104694d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000104ada674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000104add8a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000104abb4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000104ade164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x0000000104aac5a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000104afdc80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000104afde0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000104b0ee30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 7 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000102beb274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000102be31e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x000000010272d4fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x000000010277a5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000102778b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000102776924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000102775d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x000000010276a854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x000000010276a2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x00000001027b5db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000102768d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000102bae674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000102bb18a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000102b8f4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000102bb2164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x0000000102b805a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000102bd1c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000102bd1e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000102be2e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 9 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x000000010464b274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001046431e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x000000010418d4fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001041da5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001041d8b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001041d6924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001041d5d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x00000001041ca854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001041ca2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000104215db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x00000001041c8d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x000000010460e674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001046118a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x00000001045ef4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000104612164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001045e05a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000104631c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000104631e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000104642e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 7 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x000000010058f274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001005871e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001000d14fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x000000010011e5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x000000010011cb10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x000000010011a924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000100119d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x000000010010e854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x000000010010e2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000100159db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x000000010010cd30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000100552674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001005558a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x00000001005334ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000100556164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001005245a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000100575c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000100575e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000100586e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 5 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000100b6f274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000100b671e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001006b14fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001006fe5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001006fcb10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001006fa924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001006f9d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x00000001006ee854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001006ee2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000100739db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x00000001006ecd30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000100b32674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000100b358a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000100b134ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000100b36164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x0000000100b045a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000100b55c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000100b55e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000100b66e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 8 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[ERROR] Message: 
+Stacktrace:
+0   chromedriver                        0x00000001026a7274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x000000010269f1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001021e94fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x0000000102230a14 cxxbridge1$string$len + 382640
+4   chromedriver                        0x0000000102271db8 cxxbridge1$string$len + 649812
+5   chromedriver                        0x0000000102224d30 cxxbridge1$string$len + 334284
+6   chromedriver                        0x000000010266a674 cxxbridge1$str$ptr + 2493140
+7   chromedriver                        0x000000010266d8a8 cxxbridge1$str$ptr + 2505992
+8   chromedriver                        0x000000010264b4ac cxxbridge1$str$ptr + 2365708
+9   chromedriver                        0x000000010266e164 cxxbridge1$str$ptr + 2508228
+10  chromedriver                        0x000000010263c5a4 cxxbridge1$str$ptr + 2304516
+11  chromedriver                        0x000000010268dc80 cxxbridge1$str$ptr + 2638048
+12  chromedriver                        0x000000010268de0c cxxbridge1$str$ptr + 2638444
+13  chromedriver                        0x000000010269ee30 cxxbridge1$str$ptr + 2708112
+14  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+15  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 7 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000102643274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x000000010263b1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001021854fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001021d25a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001021d0b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x00000001021ce924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x00000001021cdd20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x00000001021c2854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001021c22e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x000000010220ddb8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x00000001021c0d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000102606674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001026098a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x00000001025e74ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x000000010260a164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001025d85a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000102629c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000102629e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x000000010263ae30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 6 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x000000010087f274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001008771e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001003c14fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x000000010040e5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x000000010040cb10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x000000010040a924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000100409d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x00000001003fe854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001003fe2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000100449db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x00000001003fcd30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000100842674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001008458a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x00000001008234ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000100846164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001008145a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000100865c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000100865e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000100876e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 7 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000104597274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x000000010458f1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001040d94fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001041265a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000104124b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000104122924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000104121d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000104116854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001041162e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000104161db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000104114d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x000000010455a674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x000000010455d8a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x000000010453b4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x000000010455e164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x000000010452c5a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x000000010457dc80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x000000010457de0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x000000010458ee30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 5 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x000000010349b274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001034931e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x0000000102fdd4fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x000000010302a5a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000103028b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000103026924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000103025d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x000000010301a854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x000000010301a2e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000103065db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000103018d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x000000010345e674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001034618a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x000000010343f4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000103462164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001034305a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000103481c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000103481e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000103492e30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 7 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x00000001012d7274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x00000001012cf1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x0000000100e194fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x0000000100e665a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000100e64b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000100e62924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000100e61d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000100e56854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x0000000100e562e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000100ea1db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000100e54d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x000000010129a674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x000000010129d8a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x000000010127b4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x000000010129e164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x000000010126c5a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x00000001012bdc80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x00000001012bde0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x00000001012cee30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 8 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000105437274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x000000010542f1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x0000000104f794fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x0000000104fc65a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x0000000104fc4b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x0000000104fc2924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x0000000104fc1d20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000104fb6854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x0000000104fb62e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x0000000105001db8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000104fb4d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x00000001053fa674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x00000001053fd8a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x00000001053db4ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x00000001053fe164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x00000001053cc5a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x000000010541dc80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x000000010541de0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x000000010542ee30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 8 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010
+[ERROR] Message: element click intercepted: Element <input id="btnAceptar" type="button" class="mf-button primary" value="Aceptar" onclick="envia()"> is not clickable at point (114, 757). Other element would receive the click: <span>...</span>
+  (Session info: chrome=139.0.7258.67); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+0   chromedriver                        0x0000000102c13274 cxxbridge1$str$ptr + 2741972
+1   chromedriver                        0x0000000102c0b1e4 cxxbridge1$str$ptr + 2709060
+2   chromedriver                        0x00000001027554fc cxxbridge1$string$len + 90520
+3   chromedriver                        0x00000001027a25a4 cxxbridge1$string$len + 406080
+4   chromedriver                        0x00000001027a0b10 cxxbridge1$string$len + 399276
+5   chromedriver                        0x000000010279e924 cxxbridge1$string$len + 390592
+6   chromedriver                        0x000000010279dd20 cxxbridge1$string$len + 387516
+7   chromedriver                        0x0000000102792854 cxxbridge1$string$len + 341232
+8   chromedriver                        0x00000001027922e0 cxxbridge1$string$len + 339836
+9   chromedriver                        0x00000001027dddb8 cxxbridge1$string$len + 649812
+10  chromedriver                        0x0000000102790d30 cxxbridge1$string$len + 334284
+11  chromedriver                        0x0000000102bd6674 cxxbridge1$str$ptr + 2493140
+12  chromedriver                        0x0000000102bd98a8 cxxbridge1$str$ptr + 2505992
+13  chromedriver                        0x0000000102bb74ac cxxbridge1$str$ptr + 2365708
+14  chromedriver                        0x0000000102bda164 cxxbridge1$str$ptr + 2508228
+15  chromedriver                        0x0000000102ba85a4 cxxbridge1$str$ptr + 2304516
+16  chromedriver                        0x0000000102bf9c80 cxxbridge1$str$ptr + 2638048
+17  chromedriver                        0x0000000102bf9e0c cxxbridge1$str$ptr + 2638444
+18  chromedriver                        0x0000000102c0ae30 cxxbridge1$str$ptr + 2708112
+19  libsystem_pthread.dylib             0x00000001ae92a06c _pthread_start + 148
+20  libsystem_pthread.dylib             0x00000001ae924e2c thread_start + 8
+
+[INFO] Waiting 8 minutes before next check...
+[INFO] Checking for appointments...
+[INFO] Opening start page...
+[INFO] Navigating to province URL: https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es
+[INFO] Waiting for tramite select...
+[INFO] Selected trámite with value 4010

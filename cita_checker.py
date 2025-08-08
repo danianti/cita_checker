@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
@@ -5,8 +6,8 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 import time
 import requests
-import os
 
+# Read secrets from environment variables
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 
@@ -18,34 +19,34 @@ def send_telegram_message(text):
     url = f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage'
     data = {'chat_id': TELEGRAM_CHAT_ID, 'text': text}
     try:
-        requests.post(url, data=data, timeout=10)
+        requests.post(url, data=data)
     except Exception as e:
         print(f"Failed to send Telegram message: {e}")
 
 def main():
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")  # headless mode essential in CI
+    # options.add_argument("--headless")  # Uncomment to run headless in CI
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1920,1080")
-    options.add_argument("--disable-extensions")
-    options.add_argument("--remote-debugging-port=9222")  # helps debugging connection
 
     driver = webdriver.Chrome(options=options)
-    wait = WebDriverWait(driver, 20)  # reduced wait to 20 seconds for speed
+    wait = WebDriverWait(driver, 30)
 
     try:
         print("[STEP] Opening main page...")
         driver.get('https://icp.administracionelectronica.gob.es/icpplus/index.html')
 
         print("[STEP] Selecting province Ávila...")
-        # The select element with id 'form' is actually a form element, need correct select id or xpath
-        # Correct selector might be a select element with name 'p' or use URL param for Avila:
-        # But the initial page uses links, so use the Avila direct link:
-        driver.get('https://icp.administracionelectronica.gob.es/icpplus/citar?p=5&locale=es')
+        province_select = wait.until(EC.presence_of_element_located((By.ID, "form")))
+        select = Select(province_select)
+        avila_value = "/icpplus/citar?p=5&locale=es"
+        select.select_by_value(avila_value)
+        print("[INFO] Province Ávila selected")
 
-        # Accept cookies if present
+        accept_btn = wait.until(EC.element_to_be_clickable((By.ID, "btnAceptar")))
+        accept_btn.click()
+        print("[INFO] Clicked Accept button for province")
+
         try:
             cookie_btn = wait.until(EC.element_to_be_clickable((By.ID, "cookie_action_close_header")))
             cookie_btn.click()
@@ -53,7 +54,6 @@ def main():
         except TimeoutException:
             print("[INFO] No cookie consent popup found, continuing...")
 
-        # Select tramite 4010
         tramite_select_elem = wait.until(EC.presence_of_element_located((By.ID, "tramiteGrupo[1]")))
         tramite_select = Select(tramite_select_elem)
         print("[INFO] Tramite dropdown found. Selecting tramite 4010...")
@@ -77,7 +77,7 @@ def main():
         wait.until(EC.element_to_be_clickable((By.ID, 'btnEnviar'))).click()
         print("[INFO] Clicked final 'Aceptar' button (btnEnviar)")
 
-        time.sleep(3)  # wait page to load
+        time.sleep(3)  # Wait for page to load
 
         page_source = driver.page_source
         no_appointments_msg = "En este momento no hay citas disponibles"
@@ -89,8 +89,8 @@ def main():
             print("[INFO] Appointments AVAILABLE!")
             send_telegram_message("🚨 Citas disponibles en Ávila para POLICÍA-TOMA DE HUELLAS. Reserve rápido!")
 
-    except TimeoutException as te:
-        print(f"[ERROR] Timeout waiting for page elements: {te}")
+    except TimeoutException:
+        print("[ERROR] Timeout waiting for page elements.")
     except Exception as e:
         print(f"[ERROR] Exception occurred: {e}")
     finally:

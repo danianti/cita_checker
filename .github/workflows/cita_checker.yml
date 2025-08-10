@@ -13,29 +13,24 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Install dependencies for Chrome
-        run: sudo apt-get update && sudo apt-get install -y libnss3 libgconf-2-4
-
-      - name: Set up Python 3.11
+      - name: Set up Python 3.9
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.9'
 
-      - name: Install Python packages
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install selenium requests
+
+      - name: Install dependencies for Chrome
+        run: sudo apt-get update && sudo apt-get install -y libnss3
 
       - name: Install Chrome + compatible ChromeDriver
         uses: browser-actions/setup-chrome@v1
         with:
           chrome: stable
           chromedriver: true
-
-      - name: Check Chrome versions
-        run: |
-          google-chrome --version
-          chromedriver --version
 
       - name: Run cita checker script
         env:

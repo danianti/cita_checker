@@ -25,4 +25,4 @@ jobs:
 
       - name: Run cita checker
         run: |
-          python your_script.py
+          python cita_checker.py

@@ -1,28 +1,41 @@
-name: cita_checker
+name: Cita Checker
 
 on:
-  workflow_dispatch: # allows manual trigger
   schedule:
-    - cron: "*/10 * * * *" # every 10 minutes
+    - cron: '*/10 * * * *'  # every 10 minutes
+  workflow_dispatch:
 
 jobs:
-  run:
+  run-checker:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install selenium requests python-telegram-bot
+          python -m pip install --upgrade pip
+          pip install selenium requests
 
-      - name: Run cita checker
+      - name: Install Chrome + compatible ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome: stable
+          chromedriver: true
+
+      - name: Verify Chrome & ChromeDriver versions
         run: |
-          python cita_checker.py
+          google-chrome --version
+          chromedriver --version
+
+      - name: Run cita checker script
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python cita_checker.py

@@ -1,36 +1,46 @@
 name: Cita Checker
 
 on:
-  schedule:
-    - cron: '*/10 * * * *'   # every 10 minutes
   workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"  # every 10 minutes
 
 jobs:
-  run-checker:
+  run-script:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: "3.9"
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install selenium requests
+          pip install -r requirements.txt
+          pip install selenium
 
-      - name: Install Chrome + compatible ChromeDriver
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome: stable
-          chromedriver: true
-
-      - name: Run cita checker script
+      - name: Debug Environment Variables
+        run: |
+          echo "TELEGRAM_CHAT_ID is set: ${#TELEGRAM_CHAT_ID} characters"
+          echo "TELEGRAM_TOKEN is set: ${#TELEGRAM_TOKEN} characters"
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python cita_checker.py
+
+      - name: Run cita_checker.py with debug
+        run: |
+          python cita_checker.py --debug
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Upload screenshots if failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-screenshots
+          path: screenshots/
